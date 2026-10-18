@@ -1,0 +1,11 @@
+{
+  "summary": "Installed-system first-boot maintenance verification; no updates available",
+  "changes": "No packages, system configuration, services, jobs or GPU policies changed. Isolated update database refreshed; private plan and report and sanitized receipt created.",
+  "tests": "OAuth authenticated with ChatGPT; checkupdates exit 2, no updates; system and user failed units zero; GDM and NetworkManager active; connected network; audio services active and devices enumerated; Vulkan enumerated Intel Arc B580 and AMD integrated GPU; keyboard us+intl; pacman -Qkk reported zero altered files for ChatGPT, LTS kernel, Mesa and both Vulkan drivers; root mode 0750 and required package signatures preserved; timeout infinity and timer active. Root identity matched approved installation.",
+  "rollback": "No system change requiring rollback. Retain private records as evidence.",
+  "problem": "No actionable functional failure established. Boot and Vulkan enumeration warnings retained for local follow-up.",
+  "solution": "No configuration change justified by observed state.",
+  "reproduction": "Read-only system and user service checks, isolated repository update check, package integrity checks, audio device and Vulkan device enumeration. Application UI, audible playback and gaming performance were not tested.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
