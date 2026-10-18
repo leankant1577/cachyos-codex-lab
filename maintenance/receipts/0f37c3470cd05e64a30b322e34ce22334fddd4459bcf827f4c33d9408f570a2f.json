@@ -1,0 +1,11 @@
+{
+  "summary": "Repair blank graphical assistant window when launched as root in a Wayland desktop session",
+  "changes": "Corrected custom launcher to forward the absolute existing Wayland socket and select the native Wayland backend. Retained the separate root profile and existing specific passwordless sudo rule. Restarted only the affected root graphical application. No credential files were copied. A temporary software rendering probe was reverted after it failed to fix blank output.",
+  "tests": "Original X11 launch emitted repeated graphics authorization and EGL initialization failures and produced a blank captured window. Software-rendering probe removed EGL errors but still produced a blank window. Native Wayland launch rendered the home page, sidebar and message input in a private screenshot. Root main process verified; original graphics failures absent. Launcher syntax, rollback syntax, sudoers validation, desktop-file validation and passwordless launch check passed.",
+  "rollback": "Restore privately backed-up launcher and wrapper with the supplied restore script, then reopen the graphical application. Profiles and existing jobs remain intact.",
+  "problem": "Custom root launcher forced X11 inside an existing Wayland desktop session; graphics paths failed although application processes started. Previous process-only verification did not detect blank output.",
+  "solution": "Use the existing native Wayland session socket for the root graphical process and verify rendered interface content.",
+  "reproduction": "In a Wayland session, open the configured root desktop launcher and verify the visible home interface and root process ownership.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
