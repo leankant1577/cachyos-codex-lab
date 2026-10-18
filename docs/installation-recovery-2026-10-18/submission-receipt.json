@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-18",
+  "status": "submitted",
+  "maintainer_response_verified": false,
+  "upstream_comment": "https://github.com/CachyOS/New-Cli-Installer/issues/50#issuecomment-6255284025",
+  "upstream_issue": "https://github.com/CachyOS/New-Cli-Installer/issues/51",
+  "source_revision_reviewed": "8530fd133a7177d1cf0767659eb1355ffcd53a58",
+  "files": {
+    "repositorios-comment.md": "6c46ea97805df40ba001965eebd20a568ded034590fb07d0fda92f247bea42e1",
+    "desktop-issue.md": "57968db532d3eaa86ad7954ff06bf66885acab219f10fae9ca21ba9859d4616d",
+    "README.md": "dbe4c234ab9eb8bc46679bc1822024c012d0594ca6863e873aed2307e58c5b47"
+  }
+}
