@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "target": {
+    "path": "",
+    "model": "",
+    "serial": "",
+    "size_bytes": 0
+  },
+  "mode": "erase-whole-disk",
+  "preserve_data": false,
+  "encrypt_root": false,
+  "locale": "pt_BR.UTF-8",
+  "keymap": "br",
+  "timezone": "America/Sao_Paulo",
+  "username": "",
+  "hostname": "cachyos",
+  "desktop": "kde",
+  "filesystem": "btrfs",
+  "bootloader": "grub"
+}

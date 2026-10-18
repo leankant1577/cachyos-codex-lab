@@ -1,0 +1,15 @@
+[Unit]
+Description=Codex CachyOS root maintenance
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=!/etc/codex-cachyos/live
+
+[Service]
+Type=oneshot
+User=root
+UMask=0077
+ExecStart=/usr/local/bin/codex-cachyos manutencao
+TimeoutStartSec=12min
+KillMode=control-group
+Nice=15
+IOSchedulingClass=idle

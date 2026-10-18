@@ -1,0 +1,22 @@
+[Unit]
+Description=Codex assisted CachyOS installation without installer screens
+After=NetworkManager.service network-online.target
+Wants=NetworkManager.service network-online.target
+Conflicts=getty@tty1.service
+ConditionPathExists=/etc/codex-cachyos/live
+
+[Service]
+Type=simple
+User=root
+UMask=0077
+ExecStart=/usr/local/bin/codex-cachyos iniciar
+StandardInput=tty-force
+StandardOutput=tty
+StandardError=tty
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target

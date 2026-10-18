@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+*.iso
+*.qcow2
+*.partial
+auth.json
+credentials.json
+installer.json
+*.log

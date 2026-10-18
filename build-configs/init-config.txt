@@ -1,0 +1,5 @@
+EARLYHOOKS="udev archiso_pxe_nbd"
+HOOKS="udev memdisk archiso archiso_loop_mnt archiso_pxe_common archiso_pxe_nbd archiso_pxe_http archiso_pxe_nfs"
+LATEHOOKS="archiso_pxe_common"
+CLEANUPHOOKS="udev"
+EMERGENCYHOOKS=""

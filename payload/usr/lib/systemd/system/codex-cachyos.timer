@@ -1,0 +1,12 @@
+[Unit]
+Description=Check whether Codex CachyOS maintenance is needed
+ConditionPathExists=!/etc/codex-cachyos/live
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=30min
+AccuracySec=1min
+Unit=codex-cachyos.service
+
+[Install]
+WantedBy=timers.target
