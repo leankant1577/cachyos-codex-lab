@@ -1,0 +1,11 @@
+{
+  "summary": "Interactive administrator no longer starts maintenance on launch",
+  "changes": "Removed automatic initial maintenance message from interactive administrator. Replaced stale pending first-boot instruction with completed installation status. Scheduled maintenance unchanged.",
+  "tests": "PASS: Python syntax; admin launches without prompt; installer retains prompt; failed OAuth stops launch. Subprocesses mocked, no agent or maintenance launched.",
+  "rollback": "Restore the two original launcher and prompt files from the private audit backup.",
+  "problem": "Custom administrator launcher injected a maintenance request on every opening.",
+  "solution": "Interactive administration starts without an initial request; installation entry retains its installation prompt.",
+  "reproduction": "Inspection and mocked subprocess invocation confirmed maintenance prompt passed on every administrator launch before the fix.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
