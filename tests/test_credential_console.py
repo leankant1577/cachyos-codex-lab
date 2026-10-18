@@ -46,7 +46,7 @@ def test_cancelled_console_clears_old_secret_and_reports_failure(app, monkeypatc
     monkeypatch.setattr(app.sys, "stdin", SimpleNamespace(isatty=lambda: False))
     (tmp_path / "credentials.json").write_text("stale test secret")
     monkeypatch.setattr(app.subprocess, "run", lambda *args, **kwargs: None)
-    with pytest.raises(ValueError, match="n�o foi confirmada"):
+    with pytest.raises(ValueError, match="não foi confirmada"):
         app.collect_credentials(tmp_path / "plan.json")
     assert not (tmp_path / "credentials.json").exists()
 

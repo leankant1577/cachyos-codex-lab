@@ -44,7 +44,7 @@ def check_plan(path):
     native = validate_plan(plan, disk_inventory(), uefi=Path("/sys/firmware/efi").exists())
     zone = Path("/usr/share/zoneinfo") / plan["timezone"]
     if not zone.is_file():
-        raise ValueError("timezone: fuso hor�rio n�o encontrado")
+        raise ValueError("timezone: fuso horário não encontrado")
     return plan, native
 
 
@@ -56,20 +56,20 @@ def collect_credentials(path):
     if not terminal.startswith("/dev/tty"):
         # A Codex tool's pipe or pseudoterminal cannot receive the human's
         # password directly. Switch to a local VT, then return to Codex.
-        print("Digite a senha no console local que ser� aberto. Ela n�o passa pelo chat.", flush=True)
+        print("Digite a senha no console local que será aberto. Ela não passa pelo chat.", flush=True)
         subprocess.run(["openvt", "--switch", "--wait", "--", "/usr/local/bin/codex-cachyos",
                         "credenciais", str(Path(path).resolve())], check=True)
         if not credential_file.is_file():
-            raise ValueError("A senha local n�o foi confirmada. Execute credenciais novamente.")
+            raise ValueError("A senha local não foi confirmada. Execute credenciais novamente.")
         return
-    password = getpass.getpass(f'Senha local para {plan["username"]}, n�o enviar ao chat: ')
+    password = getpass.getpass(f'Senha local para {plan["username"]}, não enviar ao chat: ')
     if len(password) < 12 or any(character in password for character in ("\n", "\r", ":")):
         raise ValueError("Use pelo menos 12 caracteres, sem quebra de linha ou dois-pontos")
     if password != getpass.getpass("Repita a senha local: "):
-        raise ValueError("As senhas n�o coincidem")
+        raise ValueError("As senhas não coincidem")
     (RUNTIME / "credentials.json").write_text(json.dumps(
         {"plan_sha256": plan_digest(plan), "user_password": password}))
-    print("Credencial local tempor�ria preparada. Nenhuma senha foi inclu�da no plano.")
+    print("Credencial local temporária preparada. Nenhuma senha foi incluída no plano.")
 
 
 def run_install(path, approved):
@@ -77,7 +77,7 @@ def run_install(path, approved):
     plan, native = check_plan(path)
     digest = plan_digest(plan)
     if approved != digest:
-        raise ValueError("O hash aprovado no chat n�o corresponde ao plano atual")
+        raise ValueError("O hash aprovado no chat não corresponde ao plano atual")
     credentials = RUNTIME / "credentials.json"
     if not credentials.is_file():
         raise ValueError("Falta a senha local: execute o helper credenciais no terminal")
@@ -100,13 +100,13 @@ def run_install(path, approved):
                 result = subprocess.run(["cachyos-installer", "--config", str(config)],
                                         stdout=log, stderr=subprocess.STDOUT, umask=0o022)
             if result.returncode:
-                raise RuntimeError(f"Instalador retornou {result.returncode}. N�o repetir automaticamente; examine {run_log}")
+                raise RuntimeError(f"Instalador retornou {result.returncode}. Não repetir automaticamente; examine {run_log}")
             from target_install import finish_install
             finish_install(plan, secret["user_password"])
             (STATE / "last-install.json").write_text(json.dumps(
                 {"plan_sha256": digest, "native_exit_code": result.returncode,
                  "post_install_payload": True, "automatic_reboot": False}) + "\n")
-            print("Instala��o e payload conclu�dos. N�o houve reinicializa��o autom�tica.")
+            print("Instalação e payload concluídos. Não houve reinicialização automática.")
         finally:
             config.unlink(missing_ok=True)
             credentials.unlink(missing_ok=True)

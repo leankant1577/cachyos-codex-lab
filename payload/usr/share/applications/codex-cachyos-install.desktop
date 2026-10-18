@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Instalar CachyOS com Codex
-Comment=Converse com o Codex para preparar e executar a instala��o sem telas
+Comment=Converse com o Codex para preparar e executar a instalação sem telas
 Exec=konsole --separate -e /usr/local/bin/codex-cachyos iniciar
 Icon=utilities-terminal
 Terminal=false

@@ -36,33 +36,33 @@ def validate_plan(plan, inventory, uefi=True):
     if set(plan) != PLAN_FIELDS or plan.get("schema") != 1:
         raise ValueError("unknown/missing schema field: confira as chaves do plano")
     if plan["preserve_data"] is not False:
-        raise ValueError("preserve_data: fluxo de preserva��o ainda n�o homologado; nenhuma instala��o executada")
+        raise ValueError("preserve_data: fluxo de preservação ainda não homologado; nenhuma instalação executada")
     if plan["encrypt_root"] is not False:
-        raise ValueError("encrypt_root: criptografia neste fluxo ainda n�o homologada")
+        raise ValueError("encrypt_root: criptografia neste fluxo ainda não homologada")
     if plan["mode"] != "erase-whole-disk":
-        raise ValueError("mode: somente plano expl�cito erase-whole-disk � aceito neste fluxo")
+        raise ValueError("mode: somente plano explícito erase-whole-disk é aceito neste fluxo")
     if not uefi:
-        raise ValueError("UEFI: este fluxo de instala��o ainda n�o foi homologado para BIOS legado")
+        raise ValueError("UEFI: este fluxo de instalação ainda não foi homologado para BIOS legado")
     target = plan["target"]
     if not isinstance(target, dict) or set(target) != TARGET_FIELDS:
-        raise ValueError("target identity: modelo, serial, caminho e tamanho s�o obrigat�rios")
+        raise ValueError("target identity: modelo, serial, caminho e tamanho são obrigatórios")
     if not isinstance(target["path"], str) or not re.fullmatch(r"/dev/[a-zA-Z0-9_-]+", target["path"]):
-        raise ValueError("target path: use o caminho Linux real mostrado pelo invent�rio")
+        raise ValueError("target path: use o caminho Linux real mostrado pelo inventário")
     matches = [disk for disk in inventory if disk.get("path") == target["path"]]
     if len(matches) != 1 or matches[0].get("type") != "disk":
-        raise ValueError("target identity: disco inteiro n�o identificado de forma �nica")
+        raise ValueError("target identity: disco inteiro não identificado de forma única")
     disk = matches[0]
     if not str(target["serial"]).strip():
-        raise ValueError("serial: identifica��o ausente, n�o selecionar automaticamente")
+        raise ValueError("serial: identificação ausente, não selecionar automaticamente")
     for key in ("model", "serial"):
         if str(disk.get(key) or "").strip() != str(target[key]).strip():
             raise ValueError(f"target identity mismatch: {key}")
     if type(target["size_bytes"]) is not int or disk.get("size") != target["size_bytes"]:
         raise ValueError("target size identity mismatch")
     if disk.get("rm") in (True, 1, "1") or disk.get("tran") == "usb":
-        raise ValueError("removable/usb: m�dia remov�vel n�o � alvo deste fluxo")
+        raise ValueError("removable/usb: mídia removível não é alvo deste fluxo")
     if has_mounts(disk):
-        raise ValueError("mounted target: desmonte o alvo e revalide; n�o remover montagens automaticamente")
+        raise ValueError("mounted target: desmonte o alvo e revalide; não remover montagens automaticamente")
     patterns = {
         "username": r"[a-z_][a-z0-9_-]{0,31}",
         "hostname": r"[a-z0-9][a-z0-9-]{0,62}",
@@ -74,11 +74,11 @@ def validate_plan(plan, inventory, uefi=True):
         if not isinstance(plan[field], str) or not re.fullmatch(pattern, plan[field]):
             raise ValueError(f"{field}: invalid characters")
     if plan["username"] == "root":
-        raise ValueError("username: crie um usu�rio pessoal separado de root")
+        raise ValueError("username: crie um usuário pessoal separado de root")
     if plan["desktop"] not in {"kde", "gnome", "xfce"}:
-        raise ValueError("desktop: perfil n�o verificado neste fluxo")
+        raise ValueError("desktop: perfil não verificado neste fluxo")
     if plan["filesystem"] not in {"btrfs", "ext4"} or plan["bootloader"] != "grub":
-        raise ValueError("filesystem/bootloader: combina��o ainda n�o verificada")
+        raise ValueError("filesystem/bootloader: combinação ainda não verificada")
     return {
         "install_type": "simple", "headless_mode": True,
         "device": target["path"], "fs_name": plan["filesystem"],

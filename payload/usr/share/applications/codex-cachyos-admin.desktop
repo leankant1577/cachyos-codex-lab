@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Codex administrador do CachyOS
-Comment=Administra��o root e registros privados do sistema instalado
+Comment=Administração root e registros privados do sistema instalado
 Exec=konsole --separate -e /usr/local/bin/codex-cachyos admin
 Icon=utilities-terminal
 Terminal=false

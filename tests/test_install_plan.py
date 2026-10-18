@@ -102,7 +102,7 @@ def test_removable_target_is_rejected():
     inventory = inventory_copy()
     inventory[0]["rm"] = True
 
-    with pytest.raises(ValueError, match="remov|usb|remov�vel"):
+    with pytest.raises(ValueError, match="remov|usb|removível"):
         validate_plan(plan_copy(), inventory)
 
 

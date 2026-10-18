@@ -1,22 +1,22 @@
-# Revis�o da integra��o
+# Revisão da integração
 
-Revis�o de c�digo e evid�ncias em 18/10/2026, sem executar modelos.
+Revisão de código e evidências em 18/10/2026, sem executar modelos.
 
 O fluxo chama somente o instalador nativo em modo headless por JSON. O plano
 exige disco inteiro identificado por serial, modelo, tamanho e caminho Linux.
-UEFI � obrigat�rio. Alvos USB, remov�veis ou montados s�o bloqueados, assim
-como preserva��o, dual boot e raiz criptografada neste fluxo experimental.
+UEFI é obrigatório. Alvos USB, removíveis ou montados são bloqueados, assim
+como preservação, dual boot e raiz criptografada neste fluxo experimental.
 
-A revis�o independente resultou em revalida��o do disco na finaliza��o e
-limpeza do timer e do OAuth rec�m-copiado se houver falha posterior. O teste
-nativo revelou duas falhas que testes com mocks n�o cobriam: umask herdado e
-formato real do JSON do lsblk. Ambas foram corrigidas e receberam verifica��es
-unit�rias e Linux direcionadas. A su�te atual cont�m 32 testes.
+A revisão independente resultou em revalidação do disco na finalização e
+limpeza do timer e do OAuth recém-copiado se houver falha posterior. O teste
+nativo revelou duas falhas que testes com mocks não cobriam: umask herdado e
+formato real do JSON do lsblk. Ambas foram corrigidas e receberam verificações
+unitárias e Linux direcionadas. A suíte atual contém 32 testes.
 
-O timer root usa OAuth ChatGPT salvo, at� quatro chamadas por dia UTC e pausa
-ap�s tr�s falhas consecutivas no mesmo dia. Sem autentica��o, n�o chama o modelo.
-A qualidade das decis�es administrativas ainda n�o foi avaliada. Prompts s�o
-instru��es ao agente e n�o imp�em uma barreira de permiss�es ao root.
+O timer root usa OAuth ChatGPT salvo, até quatro chamadas por dia UTC e pausa
+após três falhas consecutivas no mesmo dia. Sem autenticação, não chama o modelo.
+A qualidade das decisões administrativas ainda não foi avaliada. Prompts são
+instruções ao agente e não impõem uma barreira de permissões ao root.
 
-N�o h� promessa de ganho de FPS, reparo autom�tico correto ou aprova��o oficial
-pelo CachyOS. As evid�ncias e limita��es atuais est�o em docs/verification.md.
+Não há promessa de ganho de FPS, reparo automático correto ou aprovação oficial
+pelo CachyOS. As evidências e limitações atuais estão em docs/verification.md.
