@@ -1,0 +1,8 @@
+{
+  "summary": "Enable repository update checks and maintenance reporting",
+  "changes": "Maintenance now checks available repository versions using an isolated checkupdates database. Added queued GitHub receipts and relevant CachyOS issue reporting. Existing root execution and timer retained.",
+  "tests": "Ten offline tests passed. Installed files matched reviewed candidates. Live repository update check completed successfully. Prior root agent execution exited successfully.",
+  "rollback": "Private timestamped backups retain the previous maintenance code and prompts. Restore those files and remove the new publisher to reverse this integration.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
