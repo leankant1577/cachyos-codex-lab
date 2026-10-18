@@ -90,7 +90,8 @@ do desktop e hardware real não foram executados nestes testes.
 
 Ainda não houve OAuth, conversa autenticada, avaliação de reparos ou comparação
 de desempenho. A Intel Arc B580 e a instalação física não foram homologadas.
-Nenhum pendrive foi formatado ou gravado. Root tem acesso amplo por solicitação
+Depois dos testes da ISO, o pendrive solicitado foi gravado e o conteúdo
+foi confirmado por SHA-256. Consulte usb-media-verification.md. Root tem acesso amplo por solicitação
 humana; prompts orientam o escopo, mas não constituem sandbox independente.
 
 A imagem final foi iniciada novamente após a inclusão das licenças. O live

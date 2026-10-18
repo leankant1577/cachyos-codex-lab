@@ -29,5 +29,12 @@
   "final_live_boot": true,
   "public_oauth_or_credentials": false,
   "oauth_or_model_inference_tested": false,
-  "hardware_installation_tested": false
+  "hardware_installation_tested": false,
+  "usb_media": {
+    "image_bytes_verified": 3616538624,
+    "image_sha256": "a3b86acb7aca372082eb0d62db5b130ab3663510e5e8fb52bd0d1ff95dd4074f",
+    "readback_sha256": "a3b86acb7aca372082eb0d62db5b130ab3663510e5e8fb52bd0d1ff95dd4074f",
+    "uncached_readback": true,
+    "physical_pc_boot_tested": false
+  }
 }

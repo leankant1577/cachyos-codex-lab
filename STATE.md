@@ -27,7 +27,8 @@ O SquashFS oficial permaneceu idêntico. Falhas e limites constam em
 [docs/verification.md](docs/verification.md).
 
 Não houve OAuth, inferência local ou remota, medição de FPS, reparo autônomo,
-instalação física ou gravação de pendrive. Os testes convencionais usaram CPU.
+instalação física do Linux. O pendrive de instalação foi gravado depois, com
+leitura de verificação SHA-256 concluída, conforme docs/usb-media-verification.md. Os testes convencionais usaram CPU.
 Root tem permissões amplas por autorização humana; prompts não são sandbox.
 Nenhum serviço ou driver do Windows foi instalado. QEMU e dependências ficaram
 no cache da tarefa, sem alterar recursos do sistema.
