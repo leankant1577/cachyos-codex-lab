@@ -1,0 +1,11 @@
+{
+  "summary": "Configure explicit passwordless root launch for the graphical desktop assistant",
+  "changes": "Added root-owned graphical launchers and a narrowly named passwordless sudo command for the desktop user. Updated system and user desktop entries. Root uses a separate profile and D-Bus session. Electron sandbox is disabled for the explicitly requested root execution. Existing desktop profile and credentials were not copied. No service or job was changed.",
+  "tests": "Sudoers validation, launcher syntax checks, both desktop-file validations and passwordless launch check passed. Real launch produced eleven root-owned graphical processes. Interactive account login and window contents were not verified.",
+  "rollback": "Private backups and an executable restore script restore desktop entries and remove the new launchers and sudoers permission. Close the root application separately; its profile is retained.",
+  "problem": "The regular graphical launcher executed as the desktop user, while the requested behavior was to run the whole graphical application as root without authentication prompts.",
+  "solution": "Use a specific root-owned sudo launcher and a dedicated root graphical profile.",
+  "reproduction": "Launch the configured desktop entry and verify the main graphical process has effective user ID zero.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
