@@ -1,0 +1,11 @@
+{
+  "summary": "Prepared a dark macOS-inspired native KDE Plasma desktop alongside GNOME",
+  "changes": "Installed Plasma 6.8 and desktop integration tools from configured repositories, adding 159 packages. Retained GNOME and GDM. Prepared a user-only dark violet color scheme, static geometric wallpaper, top bar, floating autohide dock, left window controls and US International layout. Enabled native blur and disabled wobbly and magic-lamp effects. Standard package hooks created the i2c group without adding a user. No logout, reboot, GPU or power policy changes. Private backups and package manifests retained.",
+  "tests": "Package file-presence checks passed; custom global theme recognized by KPackage; theme selection and keyboard readback verified; wallpaper XML valid; GDM active; no failed system units. Plasma session entry installed. First-login appearance and game performance remain untested. Memory/load snapshots are not a representative performance comparison.",
+  "rollback": "Select GNOME at login. A private rollback script restores the previous user configuration and removes the theme files created by this task. Added packages remain installed pending a reviewed removal plan.",
+  "problem": "User requested a different desktop appearance; no reproducible distribution defect established.",
+  "solution": "Prepared native Plasma customization with a static background and limited desktop effects.",
+  "reproduction": "No distribution defect reproduction; visual acceptance requires first login to Plasma.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
