@@ -1,0 +1,11 @@
+{
+  "summary": "Repository maintenance completed: LuaJIT package revision upgraded",
+  "changes": "Full repository database refresh and sysupgrade changed only luajit from 2.1.1791988261+2a8e017-1 to 2.1.1791988261+2a8e017-1.1. Standard package hooks completed. No reboot or manual service, job, desktop, driver, power or security reconfiguration. Private audit and rollback archives retained.",
+  "tests": "Before and after: package database checks, LuaJIT file integrity and runtime smoke test passed. Gamescope integrity and dynamic linkage passed. Entire package inventory comparison confirmed only LuaJIT changed; monitored configuration fingerprints and protected root mode remained identical. No failed units and no remaining repository updates. ChatGPT package check reported one previously customized desktop entry; prior maintenance receipts explain it, desktop validation and wrapper syntax pass, with a multiple-category menu hint. No graphical application or gaming performance test was performed.",
+  "rollback": "Previous LuaJIT package archive and signature retained privately with inventory and exact restoration command. If regression is confirmed, restore only that compatible cached package using pacman -U and recheck dependencies. Rollback was not needed or executed.",
+  "problem": "Routine package revision update was available. A preexisting customized ChatGPT desktop launcher differs from the packaged file. A local libclc revision is newer than its repository revision.",
+  "solution": "Applied the full available repository upgrade; preserved the documented launcher customization and newer local libclc without downgrade.",
+  "reproduction": "Separate repository update check identified one LuaJIT update before maintenance; the same check reported no updates afterward. No reproducible distribution defect was established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
