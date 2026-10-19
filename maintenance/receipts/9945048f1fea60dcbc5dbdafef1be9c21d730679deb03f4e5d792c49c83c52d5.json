@@ -1,0 +1,11 @@
+{
+  "summary": "Routine LuaJIT repository upgrade completed with post-update verification.",
+  "changes": "Completed full repository refresh and system upgrade. Only luajit changed: 2.1.1791988261+2a8e017-1.1 to 2.1.1792349434+dd3b243-1.1 from cachyos-extra-znver4. Preserved the previous signed package and protected configuration backups in a private audit. No package removal or configuration edit was performed. Existing KDE settings, US International keyboard, GPU packages, optimized repositories, signature policy and maintenance timer were preserved.",
+  "tests": "Before: authenticated maintenance gate passed; pacman dependency database and all 50 LuaJIT package files passed; basic interpreter test passed. After: same database and file checks passed; LuaJIT version and assertions passed with JIT disabled; ldd reported no unresolved libraries for LuaJIT, Gamescope or OBS; no failed system units; fresh checkupdates returned 2 with no pending updates; package inventory showed only the planned LuaJIT change; protected configuration hashes were unchanged. No GUI workloads, performance benchmark or local models were run.",
+  "rollback": "Previous signed LuaJIT package retained privately. If a regression requires reversal, use pacman -U with that preserved package and repeat dependency, package integrity and linkage checks. Rollback was not needed and was not executed. No reboot was performed.",
+  "problem": "No reproducible CachyOS defect established. One mirror returned HTTP 404 during download; pacman completed retrieval and signature/integrity validation successfully. Existing libclc version 23.1.3-3 is newer than repository version 23.1.3-2; it was preserved. Publication helper could not write the receipt: GitHub returned Requires authentication. Public repository read access alone did not establish authenticated write access.",
+  "solution": "Applied the available signed LuaJIT update through the normal full-system package transaction. No mirror edit, forced downgrade, security change or performance tuning was needed. Retained the sanitized receipt in the private retry queue; no credentials or authentication settings were changed.",
+  "reproduction": "Routine repository maintenance; no upstream defect reproduction or issue submission is warranted.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
