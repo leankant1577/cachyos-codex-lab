@@ -1,0 +1,11 @@
+{
+  "summary": "Routine package maintenance: perl-uri upgraded from 5.37-1 to 5.38-1",
+  "changes": "Completed a full repository package upgrade; only perl-uri changed. Repository metadata refreshed. Standard package hooks completed. Created private package-file and package-metadata recovery archives and maintenance evidence. Desktop, graphics drivers, gaming packages, repository configuration, maintenance scheduling, security policies and existing jobs were preserved. No reboot or model execution.",
+  "tests": "Before and after: package database consistency passed, Perl and perl-uri file integrity passed, URI scheme/host/path/query parsing passed, no failed system units. After: URI module reports 5.38; only perl-uri changed in package inventory; checked configuration hashes unchanged. Final separate update check exited 2 with no pending updates. Backup archive indexes readable; package file lists unchanged.",
+  "rollback": "No rollback required or executed. Previous package files and local package metadata were preserved privately. Recovery instructions prefer the original signed package; targeted file and metadata recovery is documented as a fallback. The recovery archives are not an original signed package.",
+  "problem": "No reproducible distribution defect identified. Package manager reported an installed libclc version newer than the prioritized repository version; it was retained without downgrade.",
+  "solution": "Applied the available routine package update and verified package consistency and URI functionality.",
+  "reproduction": "Routine repository update detection followed by full system upgrade and before/after package and URI checks.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
