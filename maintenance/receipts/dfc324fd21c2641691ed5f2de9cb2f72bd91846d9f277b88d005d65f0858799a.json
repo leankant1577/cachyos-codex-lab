@@ -1,0 +1,11 @@
+{
+  "summary": "Routine full system upgrade updated Firefox and 32-bit NSS successfully.",
+  "changes": "Firefox 158.0-1 to 158.0.1-1 and lib32-nss 3.131-1 to 3.131.1-1. Complete package inventory confirmed only these two changes. Standard package hooks updated icon and desktop MIME caches and performed rebuild checks. Repository metadata, package cache and private maintenance records were also updated. KDE settings, keyboard, repository order, signature policy, graphics drivers, running kernel, other packages and existing jobs were preserved.",
+  "tests": "Before and after: package database consistency passed; Firefox and lib32-nss package file integrity passed with no altered files; Firefox version query as an unprivileged user and dynamic library resolution passed. No failed system units. Selected protected configuration hashes and root directory mode unchanged. SDDM and maintenance timer remained enabled and active. Final isolated repository check reported no updates. Final transaction and affected-path review found no confirmed issue within the checks performed. No graphical, game or performance tests were run.",
+  "rollback": "Previous Firefox and lib32-nss signed package archives were saved privately, signatures verified and hashes recorded. Documented paired downgrade through the package manager is available for a confirmed regression after dependency review, retaining standard checks and hooks. Rollback was not required or executed; no user profiles are included in the receipt.",
+  "problem": "Two routine package updates were available. A pre-existing libclc local version newer than the selected repository was reported; it was not downgraded. No reproducible CachyOS-specific defect was established.",
+  "solution": "Applied the complete available upgrade through the existing package manager with standard signature, dependency and conflict verification. No configuration repair, security-policy change, reboot, optimization, local model execution or job restart was performed.",
+  "reproduction": "Not applicable to routine package updates. No upstream issue or performance gain is claimed.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
