@@ -1,0 +1,11 @@
+{
+  "summary": "Verificacao de manutencao: sistema atualizado, sem transacao de pacotes ou reconfiguracao.",
+  "changes": "Somente registros privados de auditoria, ponteiro da auditoria atual, metadados isolados de consulta e este recibo sanitizado. Pacotes, arquivos de configuracao protegidos, servicos, drivers e teclado KDE US International permaneceram inalterados. Nenhum codigo alterado.",
+  "tests": "Login ChatGPT valido sem registrar credenciais; checkupdates retornou 2 sem atualizacoes; pacman -Dk sem erros; zero unidades systemd em falha antes e depois; inventario de 1559 pacotes identico; hashes selecionados de configuracao inalterados. Integridade detalhada em 12 pacotes: 10 sem divergencias; systemd apresentou grupo de journal diferente dos metadados do pacote, mas correspondente ao tmpfiles instalado; ChatGPT apresentou atalho personalizado preexistente, validado com desktop-file-validate. Repositorios znver4, assinaturas confiaveis obrigatorias, diretorio administrativo 0750, SDDM habilitado e timer ativo preservados. Sem testes visuais, jogos ou benchmarks.",
+  "rollback": "Nenhuma alteracao funcional a reverter; configuracoes e servicos preservados. Registros privados mantidos como evidencia. Nenhum rollback executado.",
+  "problem": "Nenhuma atualizacao pendente ou falha de servico detectada. Perfil KDE atual NoirRefined/Klassy difere da preferencia historica WhiteSur Dark; divergencia ja registrada antes desta execucao. Avisos de integridade detalhados nos testes, sem falha funcional demonstrada.",
+  "solution": "Sem reparo automatico necessario pelos testes realizados. Preservado o perfil atual e registrada proposta local para confirmar a preferencia visual em futura sessao interativa. Nenhuma alteracao de seguranca.",
+  "reproduction": "Consulta de atualizacoes em banco separado, pacman -Dk, pacman -Qkk nos pacotes principais, desktop-file-validate no atalho instalado e systemctl --failed. Nenhum problema especifico do CachyOS demonstrado.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
