@@ -1,0 +1,11 @@
+{
+  "summary": "Verificacao de manutencao sem atualizacoes pendentes; divergencia recente do gerenciador grafico preservada para revisao humana.",
+  "changes": "Nenhum pacote, servico ou configuracao operacional alterado. Criados apenas registros privados, banco separado temporario de consulta e este recibo sanitizado.",
+  "tests": "OAuth ChatGPT confirmado. checkupdates retornou 2 sem atualizacoes. pacman -Dk sem erros. Nenhuma unidade em falha. Inventario de pacotes, alias grafico e hashes de configuracoes selecionadas permaneceram iguais. ChatGPT, Steam e drivers Vulkan Intel/AMD de 64 e 32 bits presentes. Assinaturas confiaveis e permissao administrativa preservadas. Sem testes graficos, benchmarks ou reboot.",
+  "rollback": "Nenhuma alteracao operacional nesta execucao; nenhuma reversao necessaria. Nao desfazer mudancas de outras sessoes.",
+  "problem": "Prompt de manutencao solicita KDE com SDDM. Historico de pacotes mostra instalacao de XFCE e LightDM poucos minutos antes desta verificacao. SDDM ativo, mas alias do proximo boot aponta para LightDM. Origem e intencao dessa mudanca nao estabelecidas.",
+  "solution": "Preservado estado observado e registrada proposta privada para confirmar preferencia atual antes de reconciliar prompt e gerenciador de login. Nenhuma correcao aplicada ou validada para essa divergencia.",
+  "reproduction": "Consulta de estado e alias dos gerenciadores de login e eventos de instalacao de pacotes reproduz a observacao local; nao foi demonstrado defeito da distribuicao.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
