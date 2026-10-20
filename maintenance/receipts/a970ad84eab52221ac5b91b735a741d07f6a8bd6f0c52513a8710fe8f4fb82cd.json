@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização administrativa concluída: ethtool 1:7.1-1.1 para 1:7.2-1.1.",
+  "changes": "Atualizados os índices dos repositórios e somente o pacote ethtool pela atualização completa do pacman. Criada cópia Btrfs de recuperação somente leitura e registros privados. Preservados KDE, teclado US International, drivers Intel/AMD, configurações e política de manutenção. Nenhum reboot, ajuste de GPU, rede, energia, segurança ou execução de modelos.",
+  "tests": "OAuth confirmado antes da manutenção. Antes/depois: base pacman consistente, pacote ethtool íntegro; versão da ferramenta passou de 7.1 a 7.2. Assinatura e integridade validadas pelo pacman. Após: 12 arquivos ethtool sem alteração inesperada, Plasma e Vulkan Intel/AMD íntegros, KDE/SDDM ativos, nenhuma unidade com falha. Manifestos indicam somente ethtool alterado; hashes protegidos iguais. Pacman e checkupdates independente não indicam atualização pendente. Snapshot confirmado somente leitura. Revisão manual do diff de pacotes e caminhos; nenhum código-fonte alterado.",
+  "rollback": "Mantida cópia Btrfs com arquivos originais do ethtool e sua entrada local de pacote, para recuperação seletiva se necessária após verificar ausência de transações posteriores. Arquivo anterior assinado ausente do cache. Nenhuma reversão realizada ou testada; nenhum rollback integral automático.",
+  "problem": "Atualização comum disponível. Divergência de aparência KDE e alteração local no atalho ChatGPT eram preexistentes e foram preservadas; decisão de tema adiada para sessão interativa. libclc local mais recente que repositório preservado. A prévia sincronizou índices antes do registro do plano, sem instalar pacotes nessa etapa.",
+  "solution": "Aplicada atualização completa dos pacotes pendentes com assinatura obrigatória preservada. Nenhuma correção adicional de configuração. Registros incluem a ordem da consulta inicial e o tratamento correto dos códigos de saída de consultas sem atualizações.",
+  "reproduction": "Consulta aos repositórios mostrou somente ethtool pendente. Atualização completa instalou essa versão e consultas posteriores não mostraram pendências. Não foram executados benchmarks, testes gráficos ou testes invasivos de rede; não há alegação de ganho de desempenho.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
