@@ -1,0 +1,11 @@
+{
+  "summary": "Routine NSS and Mozilla certificate package maintenance completed.",
+  "changes": "Updated nss and ca-certificates-mozilla from 3.131-1.1 to 3.131.1-1.1 in a complete repository upgrade. Refreshed package metadata, cached the signed update archives and regenerated certificate stores through the standard hook. Created private audit records and a read-only root snapshot before installation. No other installed package version changed; retained the newer local libclc package. Existing desktop configuration, graphics drivers, repository configuration, package signature requirements, root-directory mode and maintenance timer were preserved. No reboot or job restart was requested.",
+  "tests": "Before: saved package inventory, package database consistency, target-package integrity, authentication status, failed-unit list and selected configuration hashes. After: package database consistent; 144 target-package files checked with zero altered files; default certificate store loaded 118 CA certificates; NSS shared library loaded; no failed units; protected hashes and driver versions unchanged; isolated repository check returned no pending updates. Final transaction and affected-path review completed. Graphical application and gaming runtime tests were not performed.",
+  "rollback": "Retained a verified read-only snapshot of the pre-update root with matching package database and configuration. Separate user-data subvolumes and EFI are excluded. Previous-version package archives were not cached. Recovery would require a separately reviewed exact-file/database restore or offline root restore with explicit recovery authorization; no rollback was needed or attempted.",
+  "problem": "No reproducible CachyOS-specific defect established. Package manager noted an existing local libclc version newer than its repository version; it was preserved.",
+  "solution": "Applied the two routine repository upgrades without changing existing preferences or downgrade policy.",
+  "reproduction": "Not applicable to routine package maintenance.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
