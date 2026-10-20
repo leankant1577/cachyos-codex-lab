@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização completa de pacotes: scx-scheds 1.1.3-2 para 1.1.4-1.",
+  "changes": "Sincronizados os repositórios configurados e atualizado exclusivamente scx-scheds, com assinatura validada. Preservados KDE, teclado, drivers Intel/AMD, repositórios e políticas existentes. SCX permaneceu desativado. Sem reboot, alteração de energia, segurança ou jobs.",
+  "tests": "Login ChatGPT confirmado. pacman -Dk passou antes/depois; pacman -Qkk scx-scheds passou antes/depois; verificação final de presença dos arquivos de 12 pacotes essenciais passou; sem unidades systemd em falha antes/depois; hashes e permissões dos arquivos protegidos permaneceram iguais. checkupdates final retornou 2, sem atualizações pendentes. Revisão do inventário confirmou somente um pacote alterado. Atalho ChatGPT personalizado anterior permaneceu com o mesmo hash histórico e passou na validação desktop. Sem testes de GUI, jogos, escalonador ou desempenho.",
+  "rollback": "Versão anterior 1.1.3-2 e assinatura preservadas em armazenamento privado, validadas pelo pacman antes da atualização. Reversão preparada via pacman -U do arquivo assinado, condicionada à conferência de dependências. Não foi necessário executar rollback.",
+  "problem": "Nenhum defeito novo confirmado. libclc local está mais novo que o repositório e foi preservado. Divergência de integridade no atalho ChatGPT corresponde à personalização anterior documentada.",
+  "solution": "Atualização convencional concluída sem mudança de configurações ou ativação de escalonadores.",
+  "reproduction": "",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
