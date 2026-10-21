@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização de PySide6 e Shiboken6 concluída com verificações locais.",
+  "changes": "Atualização completa dos repositórios oficiais alterou somente pyside6 e shiboken6 de 6.12.0-2.1 para 6.12.0-3.1, usando o repositório znver4. Bancos e caches atualizados; hooks convencionais de marcador de atualização e verificação de rebuild executados. Nenhuma configuração ou serviço foi alterado manualmente.",
+  "tests": "Antes e depois: banco de pacotes consistente; 577 arquivos dos dois pacotes sem alterações inesperadas; importações Qt, QCoreApplication e QImage passaram. Assinaturas e conflitos verificados pelo gerenciador. Consulta posterior sem atualizações. Dezessete configurações preservadas por hash e modo; lista de unidades falhas inalterada. Sem testes gráficos, jogos, desempenho ou downgrade.",
+  "rollback": "Dois pacotes anteriores e assinaturas preservados com hashes em auditoria privada. Em regressão confirmada, reverter ambos juntos pelo gerenciador de pacotes e repetir os testes. Reversão não utilizada.",
+  "problem": "Falha preexistente do verificador de integração continua pendente por critérios de evidência não satisfeitos. Desktop observado diverge da preferência histórica; propostas locais preservadas.",
+  "solution": "Atualizações rotineiras aplicadas. Não houve correção da integração, promoção de baseline, migração de desktop, retomada de jobs ou reboot.",
+  "reproduction": "Não se aplica a um problema reproduzível específico da distribuição.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
