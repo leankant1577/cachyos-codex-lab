@@ -1,0 +1,11 @@
+{
+  "summary": "Signed iproute2 maintenance update verified; existing integration and configuration discrepancies retained for review",
+  "changes": "Updated only iproute2 from 7.2.0-1.1 to 7.3.0-1.1 through full repository upgrade. Retained verified prior package and detached signature. No desktop, security, driver, GPU policy, job or reboot changes. Private audit and local follow-up proposal recorded.",
+  "tests": "Dependency database and all 188 iproute2 package files passed before and after. ip, tc and ss version probes passed before and after. Read-only link, route and socket-summary probes passed after. Fresh isolated update query reported no pending packages. Full installed-package comparison confirmed only iproute2 changed. All 16 preservation entries remained unchanged. OAuth remained valid. Distinct final package/path review completed; no local source edits or independent review. Initial private-cache download access failure was resolved using standard package cache without weakening download sandbox; old detached signature fetch failed, so trusted existing sync metadata supplied the successfully verified signature. No GUI, game or performance test.",
+  "rollback": "Prior package archive and detached signature retained privately after SHA256 and package-key verification. If an attributable regression requires reversal, first exclude later transactions, restore only the previous iproute2 package with the package manager and repeat dependency, integrity and read-only utility checks. No rollback needed.",
+  "problem": "Existing integration service still needs attention for acceptance failures and unavailable native runtime evidence. Current desktop and directory mode also differ from historical preferences; provenance unresolved.",
+  "solution": "No integration replay or baseline promotion. Preserved observed desktop and permissions; recorded an interactive follow-up proposal.",
+  "reproduction": "No new CachyOS-specific reproducible issue established during this package update.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
