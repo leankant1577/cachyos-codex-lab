@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização de duas bibliotecas concluída e verificada; divergências anteriores preservadas para revisão.",
+  "changes": "c-ares 1.34.8-1.1 para 1.34.9-1.1; python-tornado 6.5.10-1.1 para 6.6.0-1.1. Transação integral somente desses dois pacotes, assinaturas exigidas, hooks sem erros. Nenhuma alteração de configuração, permissões, desktop, drivers, jobs ou reinício manual. Registros privados e pacotes anteriores preservados.",
+  "tests": "Banco e integridade dos pacotes aprovados antes/depois; biblioteca DNS carregada e versão conferida; parser HTTP Tornado aprovado antes/depois; aplicativo ChatGPT íntegro; OAuth válido; consulta posterior sem atualizações; diff completo confirma somente duas versões alteradas; hashes e modos monitorados preservados. Revisão final da transação e dos caminhos realizada. Sem teste de uso interativo ou benchmark.",
+  "rollback": "Pacotes anteriores e assinaturas preservados e verificados em auditoria privada. Em falha atribuível à transação, validar hashes, confirmar ausência de transação concorrente e reinstalar apenas os dois arquivos anteriores com pacman -U. Rollback não executado.",
+  "problem": "Checagem anterior de compatibilidade continua incompleta. Desktop instalado e modo do diretório administrativo divergem do histórico; propostas locais preservadas, sem alterar segurança ou retomar jobs.",
+  "solution": "Atualização convencional concluída; demais divergências exigem reconciliação em sessão interativa, sem promover baseline nem limpar falha.",
+  "reproduction": "Consulta isolada aos repositórios mostrou duas atualizações; após transação integral, consulta não mostrou atualizações. A leitura do estado de compatibilidade mantém needs_attention.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
