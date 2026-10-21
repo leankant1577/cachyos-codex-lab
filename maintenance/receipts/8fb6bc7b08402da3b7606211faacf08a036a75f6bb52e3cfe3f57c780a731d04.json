@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização de pacote verificada; divergências anteriores aguardam revisão.",
+  "changes": "Atualização completa de pacotes: somente mitmproxy passou de 12.2.3-1 para 12.2.3-2. Pacote anterior assinado preservado. Metadados e cache atualizados. Configurações monitoradas, serviços e trabalhos existentes preservados. Nenhuma alteração de código, desktop, permissões, GPU ou reinicialização.",
+  "tests": "Banco de pacotes sem erros antes e depois. Integridade do pacote: 875 arquivos e zero alterações antes e depois. Consulta de versão executada sem iniciar proxy. Arquivos do aplicativo sem ausências e autenticação local válida. Nova consulta sem atualizações pendentes. Diff completo confirmou apenas um pacote alterado. Revisão de caminhos sem novas entradas nem script de instalação. Uso interativo e jogos não testados.",
+  "rollback": "Pacote anterior e assinatura preservados e verificados para restauração local apenas desta transação se necessária. Nenhuma reversão executada.",
+  "problem": "Verificação anterior de compatibilidade continua needs_attention por falhas de aceitação e ausência de provas nativas; identidade instalada permanece igual à última verificada. Divergências anteriores de desktop e permissão administrativa exigem reconciliação humana.",
+  "solution": "Atualização rotineira concluída e testada. Propostas locais registradas para as divergências, sem modificar baseline de compatibilidade, reiniciar verificações ou alterar segurança.",
+  "reproduction": "Consulta atual de pacotes, verificação de integridade e comparação da identidade instalada com o estado persistido. Não foi demonstrado um problema específico da distribuição.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
