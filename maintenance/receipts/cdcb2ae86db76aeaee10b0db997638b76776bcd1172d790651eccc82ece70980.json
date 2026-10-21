@@ -1,0 +1,11 @@
+{
+  "summary": "Consulta de atualizações do sistema e aplicativos, sem instalação.",
+  "changes": "Somente registros privados e caches de consulta. Nenhum pacote, configuração, job ou serviço alterado.",
+  "tests": "Banco de consulta dos repositórios sincronizado separadamente: nenhum upgrade disponível. Doze pacotes AUR comparados com a API: nenhum upgrade publicado. Flatpak: uma aplicação e dez componentes com atualizações. Decky Loader possui versão estável upstream superior à empacotada. Manifesto oficial Steam mais recente que o local. DuckStation com digest atual; ES-DE corresponde à URL da release atual e ao hash de procedência. Inventários de pacotes antes e depois idênticos.",
+  "rollback": "Nenhuma reversão de pacotes necessária; somente registros e caches de consulta criados.",
+  "problem": "Há atualizações pendentes fora dos repositórios do sistema. Serviço local de compatibilidade já apresentava falha antes da consulta. Firmware e atualizadores internos de jogos e aplicativos não foram verificados.",
+  "solution": "Resultados registrados para decisão posterior; nenhuma correção ou atualização aplicada.",
+  "reproduction": "Consultar checkupdates com banco separado, API AUR, flatpak remote-ls --updates nos escopos de sistema e usuário, e metadados oficiais das releases.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
