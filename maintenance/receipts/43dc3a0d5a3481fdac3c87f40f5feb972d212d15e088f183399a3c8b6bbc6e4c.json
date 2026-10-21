@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização de três pacotes de repositório concluída; validação de integração anterior permanece pendente.",
+  "changes": "kdecoration e plasma-activities atualizados de 6.8.0-1.1 para 6.8.1-1.1; luajit de 2.1.1792527110+95f931c-1.1 para 2.1.1792588164+a4c0645-1.1. Banco e cache sincronizados na atualização completa. Criados registros privados, propostas e cópias dos três pacotes anteriores com assinaturas. Um mirror respondeu HTTP 404; fallback existente concluiu sem alterar configuração. Sem mudanças de desktop, drivers, permissões, monitor ou jobs.",
+  "tests": "OAuth confirmado. Banco de pacotes íntegro antes e depois. Assinaturas antigas verificadas e novos pacotes validados pelo gerenciador. Verificação detalhada dos três pacotes: zero arquivos alterados. Dependências dinâmicas resolvidas. LuaJIT passou operação aritmética e módulo bit antes e depois, com JIT desativado. Configurações selecionadas, ledger e baseline com hashes preservados. Sem atualizações restantes nos repositórios consultados. Presença dos arquivos de drivers e aplicativo verificada; sem teste gráfico, jogo, modelo ou desempenho.",
+  "rollback": "Três pacotes anteriores e assinaturas preservados; downgrade do conjunto preparado para regressão confirmada, sem execução nem teste por reinstalação. Não é necessário reverter as atualizações devido à falha anterior de integração. Registros e propostas são aditivos.",
+  "problem": "Monitor mantém needs_attention por provas estritas de invocação e capacidades nativas pendentes; identidade atual inalterada desde a última tentativa. Desktop e modo do diretório administrativo divergem do histórico e precisam de reconciliação. Não foi demonstrado defeito geral reproduzível da distribuição.",
+  "solution": "Atualizações autorizadas aplicadas e verificadas. Falha e critérios de aceitação preservados; propostas locais registradas para os itens restantes.",
+  "reproduction": "Consulta atual confirmou três atualizações; transação completa aplicou somente esses pacotes e consulta posterior não encontrou outras atualizações nos repositórios. Falha anterior continuou sem novo worker.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
