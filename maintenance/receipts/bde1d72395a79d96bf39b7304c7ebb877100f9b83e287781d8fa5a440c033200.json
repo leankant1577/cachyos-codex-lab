@@ -1,0 +1,11 @@
+{
+  "summary": "Manutenção: fonte de emojis atualizada; verificações concluídas com pendências anteriores preservadas.",
+  "changes": "Atualização completa via pacman -Syu alterou somente noto-fonts-emoji de 1:2.051-1 para 1:2.057-1. Hooks convencionais atualizaram os caches de fontes. Foram criados plano, backup verificável, relatório, proposta e recibo privados, e atualizados os metadados de consulta. Nenhuma mudança de desktop, driver, serviço, job ou configuração de segurança.",
+  "tests": "Antes/depois: banco pacman consistente; dez pacotes principais sem arquivos ausentes; fonte legível por fc-scan. Após a atualização: pacote de emojis sem arquivos alterados segundo pacman -Qkk; consulta atualizada sem pacotes pendentes; inventário difere somente na versão prevista. Hashes selecionados, drivers e configurações protegidas preservados. A primeira invocação de pacman encerrou no prompt por stdin fechado sem instalar; a execução corrigida concluiu com código zero. Não foram executados testes gráficos, jogos, benchmarks, modelos locais ou revisão independente de código.",
+  "rollback": "Payload e metadados locais da versão anterior preservados e conferidos byte a byte em backup privado. Pacote antigo assinado ausente no cache; preferir reinstalação assinada ou recuperação offline restrita conforme procedimento privado. Nenhuma reversão executada.",
+  "problem": "Monitor de compatibilidade permanece em atenção por contratos de evidência rejeitados e provas nativas ausentes. A instalação atual coincide com a identidade da validação reprovada, cuja conclusão foi conferida. Desktop observado usa XFCE com LightDM, divergindo da preferência histórica KDE. Ambas as pendências já existiam.",
+  "solution": "Atualização da fonte concluída com validação. Pendências mantidas como propostas locais: investigação de integração em runtime apropriado sem enfraquecer aceites e reconciliação da decisão de desktop. Nenhum job retomado ou baseline promovida.",
+  "reproduction": "Consulta isolada mostrou apenas atualização da fonte. Atualização completa aplicou um pacote; repetição da consulta mostrou ausência de atualizações. Estado de falha do monitor e divergência de desktop confirmados por consultas locais. Nenhum defeito reproduzível da distribuição demonstrado.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
