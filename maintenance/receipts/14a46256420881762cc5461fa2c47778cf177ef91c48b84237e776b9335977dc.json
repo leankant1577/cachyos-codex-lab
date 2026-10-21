@@ -1,0 +1,11 @@
+{
+  "summary": "Completed authorized system upgrade: bind 9.20.30-1.1",
+  "changes": "Upgraded only bind from 9.20.29-1.1 to 9.20.30-1.1 through a full pacman system upgrade. Verified the signed package before installation and created a read-only root filesystem snapshot beforehand. Reviewed package script and transaction hooks. DNS service remained inactive. Recorded private audit, rollback guidance and pending proposals. No desktop, driver, kernel, security policy, GPU settings or jobs changed; no reboot.",
+  "tests": "Before and after: pacman database consistency, bind file integrity, dig version, named-checkconf and named-checkzone with a synthetic zone all passed. After upgrade: bind, ChatGPT and Intel/AMD Vulkan packages in both architectures had zero altered files. Compared 37 preserved configuration/integration files without differences. Isolated repository update check found no remaining updates. Snapshot read-only status and presence of previous package files and database record verified. No new failed unit. Final transaction and affected-path review completed. No GUI, gaming, performance or rollback exercise performed.",
+  "rollback": "Read-only pre-upgrade root snapshot retained with previous bind files and local package database record. Rollback was not needed or exercised. A future confirmed regression requires scoped recovery of bind files and its package record, preserving unrelated changes. Do not automatically replace the root filesystem or reboot. Nested subvolumes and EFI are outside this snapshot.",
+  "problem": "Pre-existing local integration compatibility service still reports needs_attention because required native acceptance evidence is incomplete. Current desktop uses XFCE and LightDM while historical preference specifies KDE and SDDM.",
+  "solution": "Preserved the integration failure and baseline; did not relaunch workers or resume jobs. Recorded local proposals for a capable interactive session to address compatibility evidence and clarify desktop migration. These pending items remain unresolved.",
+  "reproduction": "Routine package update; no reproducible CachyOS distribution defect established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
