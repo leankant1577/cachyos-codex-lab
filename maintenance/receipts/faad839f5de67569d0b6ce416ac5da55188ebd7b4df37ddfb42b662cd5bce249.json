@@ -1,0 +1,11 @@
+{
+  "summary": "Verificação de manutenção sem atualizações disponíveis; duas pendências anteriores preservadas.",
+  "changes": "Nenhum pacote, código, serviço, configuração, job ou política foi alterado. Somente auditoria privada e consulta ao banco auxiliar de atualizações.",
+  "tests": "OAuth ChatGPT confirmado por status local. checkupdates retornou 2 sem atualizações. pacman -Dk passou. pacman -Qk verificou 13 pacotes sem arquivos ausentes, incluindo kernels, gráficos, ChatGPT e jogos. Inventários de pacotes, hashes dos 17 caminhos protegidos, modos, serviços e vínculos de drivers permaneceram iguais. Sem validação gráfica ou de desempenho.",
+  "rollback": "Nenhuma alteração produtiva para reverter. Preservados estado anterior, configurações e jobs; sem reboot ou reset de falhas.",
+  "problem": "Serviço de compatibilidade permanece reprovado por provas de aceitação incompletas na execução anterior. Desktop observado utiliza XFCE e LightDM, divergindo da preferência KDE registrada.",
+  "solution": "Registradas propostas locais para reconciliação da integração e decisão sobre o desktop em sessão interativa; problemas permanecem pendentes. Não reexecutado o job nem alterados critérios de aceitação.",
+  "reproduction": "Consultas locais ao estado do serviço, identidade instalada, recibos de validação e pacotes de desktop confirmaram as pendências. Não foi demonstrado defeito geral específico da distribuição.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
