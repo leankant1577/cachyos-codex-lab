@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização de elfutils e bibliotecas ELF concluída com validação básica.",
+  "changes": "elfutils e libelf 0.196-1 para 0.197-1; lib32-libelf 0.196-2 para 0.197-1. Executados hooks convencionais de mtime e diagnóstico de rebuild. Atualizados banco/cache de pacotes; criados auditoria privada, artefatos assinados de reversão e propostas locais. Nenhuma mudança de desktop, GPU, segurança ou jobs.",
+  "tests": "Banco de pacotes e integridade dos três pacotes passaram antes/depois. Seis arquivos de pacotes antigos/novos com assinaturas verificadas. Leitura ELF e versão da ferramenta passaram; API libelf identificou ELF válido e ferramenta rejeitou entrada inválida. Dependências dinâmicas sem ausências em 64/32 bits e cabeçalho ELF32 validado. Somente três pacotes mudaram; 31 itens monitorados preservados; nenhuma nova unidade falhou; consulta final sem atualizações pendentes. Revisão final de manifestos, hooks e efeitos realizada. Sem testes gráficos, jogos, execução de consumidor ELF32 ou benchmark.",
+  "rollback": "Três pacotes anteriores e assinaturas preservados com hashes em auditoria privada. Em regressão atribuível à transação, revisar dependências e reverter conjuntamente por pacman -U. Nenhuma reversão necessária.",
+  "problem": "Verificador da integração personalizada mantém falha preexistente por provas de aceitação insuficientes e ferramentas nativas indisponíveis. Desktop observado diverge da preferência histórica; propostas locais registradas.",
+  "solution": "Atualizações aplicadas após revisão da transação e assinaturas. Mantidos os critérios de aceitação e o estado anterior das pendências, sem retomar jobs ou substituir a sessão gráfica. As pendências continuam abertas para análise interativa.",
+  "reproduction": "Verificação administrativa por consulta do banco e integridade de pacotes, bibliotecas dinâmicas e leitura de arquivo ELF local. Nenhum defeito geral reproduzível do CachyOS estabelecido.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
