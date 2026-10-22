@@ -1,0 +1,11 @@
+{
+  "summary": "ProtonPlus package updated with system state preserved",
+  "changes": "Upgraded protonplus from 0.6.8-1 to 0.6.8-2 as the only pending package in a full system update. Refreshed package databases and downloaded the signed package. Standard system update marker, GLib schemas, icon and desktop metadata caches were updated by package hooks. Retained the previous signed package for rollback. Recorded private evidence and review proposals. No existing job or integration worker was resumed; no reboot performed.",
+  "tests": "ChatGPT OAuth status valid before and after. Package database and integrity checks passed for ProtonPlus, ChatGPT, LTS kernel, Mesa and Intel/AMD Vulkan. Old and new package signatures were valid with full trust. New appstream dependency already installed; dependency and desktop-entry checks passed. Only ProtonPlus changed in package inventory. Protected configuration fingerprints, services, execution timestamps, jobs and preexisting failed-unit list remained unchanged. Fresh isolated repository check reported no pending updates. No graphical launch, gaming test, benchmark or actual downgrade was performed.",
+  "rollback": "Previous signed package and detached signature retained in a private backup. If a regression is confirmed, reinstall that archive with the package manager and repeat database, integrity and dependency checks. No rollback was needed. Preserve existing services and jobs.",
+  "problem": "A preexisting custom integration check remains failed with incomplete compatibility acceptance. Other previously documented baseline discrepancies remain under local review. This does not establish a reproducible CachyOS defect.",
+  "solution": "Applied the authorized package update and preserved the integration ledger, existing jobs and configuration. Retained local proposals for preexisting issues requiring evidence or a specific decision.",
+  "reproduction": "Compare package inventories and structural checks before and after the signed full system transaction; verify one package changed, protected state stayed unchanged and a fresh repository check returned no pending updates.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
