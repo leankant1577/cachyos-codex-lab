@@ -1,0 +1,11 @@
+{
+  "summary": "Verificação de manutenção sem atualizações pendentes; aceitação da integração continua pendente.",
+  "changes": "Nenhum pacote, serviço ou configuração operacional alterado. Criados registros privados, contrato de auditoria atualizado, banco isolado de consulta e este resumo sanitizado. Nenhum job retomado ou reboot realizado.",
+  "tests": "Consulta atual de repositórios em banco isolado: nenhuma atualização disponível, saída 2. Antes/depois: pacman -Dk passou; pacman -Qkk passou para kernels, Mesa, ChatGPT e gperftools, sem arquivos alterados. Inventário de pacotes, configurações amostradas, repositórios, assinatura exigida e jobs preservados. Apenas a unidade de compatibilidade permanece falha. Verificação de systemd mostrou aviso preexistente de grupo no diretório de journals. Sem testes gráficos ou de desempenho.",
+  "rollback": "Nenhuma mudança operacional a reverter. Contrato anterior preservado na auditoria privada; restaurar somente esse contrato se necessário, após conferir alterações posteriores. Nenhuma restauração de jobs ou bancos de pacotes realizada.",
+  "problem": "Aceitação da integração personalizada segue pendente; a identidade instalada atual difere da baseline aprovada e da última verificada. Pendências históricas de recibos, linhagem e ciclo de worktree não foram revalidadas nesta execução. Desktop observado diverge do perfil confirmado e há divergência preexistente de modo no diretório administrativo. Sem vulnerabilidade explorável comprovada.",
+  "solution": "Diagnóstico somente leitura e propostas locais para revisão específica da integração, migração do desktop e reconciliação de permissões. Nenhuma correção dessas pendências foi aplicada ou declarada validada.",
+  "reproduction": "Consulta somente leitura do estado da unidade falha, comparação da identidade instalada com o estado persistido, inventário de pacotes do desktop e inspeção de modos. Nenhum executor da integração ou job de modelo iniciado.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
