@@ -1,0 +1,11 @@
+{
+  "summary": "Kernel package maintenance with unresolved compatibility findings",
+  "changes": "Full repository upgrade updated linux-cachyos and its headers from 7.3.0-3 to 7.3.0-4. Package hooks regenerated initramfs and GRUB. No automatic reboot or source changes. Existing configuration hashes unchanged.",
+  "tests": "Upgrade exited zero; kernel package file checks and GRUB syntax check passed; no remaining repository updates. Binder DKMS build failed for the new kernel because task_euid is undeclared; binder remains installed for the running LTS. Package database consistency check reported a non-package marker. Compatibility monitor cannot resolve the installed JavaScript launcher.",
+  "rollback": "Retained previous kernel and headers packages in cache for paired downgrade if needed; running LTS retained. No rollback executed.",
+  "problem": "Compatibility monitor remains failed; new kernel binder build is unavailable. Root directory mode and display manager differ from recorded expected state.",
+  "solution": "Recorded local proposals; no security changes, graphical service restart or project worker dispatch.",
+  "reproduction": "Local monitor identity probe rejects JavaScript launcher. Kernel update hook reproduces binder compilation error.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
