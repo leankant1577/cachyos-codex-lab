@@ -1,0 +1,11 @@
+{
+  "summary": "Routine maintenance: package database check repaired; no repository updates available",
+  "changes": "Preserved and relocated an unowned regular marker from the local package database into a private audit. Package inventory, protected configurations and service states unchanged. No package transaction, reboot, desktop migration or security change.",
+  "tests": "OAuth login valid. Isolated checkupdates returned 2 with no candidates. Package database check failed before relocation and passed afterward. Essential package file presence checks passed before and after. Package inventory and protected hashes unchanged; preserved marker hash matches. Existing compatibility unit failures remain.",
+  "rollback": "Return the preserved marker to its original database location only if no replacement exists; this restores the previous warning. Previous assurance contract retained. No package rollback required.",
+  "problem": "Unowned marker was interpreted as an incomplete package database entry. Compatibility monitor cannot resolve the current JavaScript CLI launcher; desktop and directory permission discrepancies remain.",
+  "solution": "Marker preserved outside package database; integrity check now passes. Other discrepancies retained as local proposals, without changing acceptance criteria or dispatching project work.",
+  "reproduction": "Database check reported missing description and file list for an unowned regular marker; same check passed after reversible relocation. Marker producer not established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
