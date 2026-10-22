@@ -1,0 +1,11 @@
+{
+  "summary": "Verificação de manutenção sem atualizações pendentes; propostas preexistentes preservadas",
+  "changes": "Criados registros privados, evidência antes/depois e banco isolado de consulta. Atualizado apenas o contrato operacional local, com cópia anterior preservada. Nenhum pacote instalado, removido ou atualizado; nenhuma mudança de configuração funcional, permissões, serviços ou jobs. Sem reboot.",
+  "tests": "OAuth local confirmado antes/depois sem coletar credenciais. Consulta atual aos repositórios terminou com código 2 e sem atualizações. Banco de pacotes consistente antes/depois; verificação de presença dos arquivos de dez pacotes essenciais sem arquivos ausentes. Inventário completo de pacotes e 31 caminhos protegidos inalterados. Kernel ativo LTS 6.18.55-2, ChatGPT 26.1016.61520-1, drivers gráficos, repositórios e política do timer preservados. Serviço de compatibilidade permanece falho e visível. Revisão final local dos artefatos e caminhos; sem código alterado ou revisão independente. Não realizados testes de jogos, boot, benchmarks ou modelos locais.",
+  "rollback": "Sem mudança funcional a reverter. Contrato operacional anterior preservado para restauração seletiva após conferir o hash do contrato atual; não executar downgrade ou restauração global. Registros privados e recibo mantidos como evidência. Nenhuma reversão executada.",
+  "problem": "Persistem falhas de aceitação da integração local e divergências anteriores de desktop e permissões. Nenhuma regressão causal do sistema foi demonstrada nesta manutenção.",
+  "solution": "Propostas locais mantidas para revisão em contexto adequado. Nenhum executor foi retomado, critério de aceitação alterado ou falha apagada. Não há solução de problema específico da distribuição comprovada nesta execução.",
+  "reproduction": "Consulta convencional de atualizações em banco isolado e comparação antes/depois do banco de pacotes, inventário, presença de arquivos essenciais, estado dos serviços e hashes de configurações protegidas.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
