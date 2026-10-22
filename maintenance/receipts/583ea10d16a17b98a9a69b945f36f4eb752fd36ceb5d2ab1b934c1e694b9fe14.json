@@ -1,0 +1,11 @@
+{
+  "summary": "Routine maintenance verification: no repository package updates pending; existing compatibility acceptance remains unresolved.",
+  "changes": "Created private maintenance evidence and refreshed the assurance record; queried repositories using an isolated database. No installed packages, operational configuration, service definitions, GPU policies or jobs were changed. A sanitized receipt is queued for the authorized personal history.",
+  "tests": "ChatGPT OAuth status valid. checkupdates returned code 2 with empty output and no errors. pacman -Dk passed before and after. pacman -Qkk reported zero altered files for the LTS kernel, Mesa, Intel and AMD Vulkan drivers, ChatGPT and ProtonPlus. Installed package inventory and selected protected configuration hashes, modes and timestamps were unchanged. Current installed ChatGPT compatibility identity differs from its last checked identity; prior conclusion checksum verified. The current installation has not been accepted by those historical proofs. No graphical tests, benchmarks or model execution performed.",
+  "rollback": "No operational rollback needed because installed packages and configuration were unchanged. Previous assurance contract retained privately; isolated query data and audit records do not affect installed packages.",
+  "problem": "Existing compatibility service remains failed following incomplete evidence acceptance for an earlier installed identity. The current ChatGPT bundled CLI is newer than that last checked identity and remains unvalidated by those proofs. Installed desktop packages differ from the requested KDE profile, and root directory mode differs from the historical baseline. These are unresolved local review items.",
+  "solution": "Preserved compatibility failure evidence, dispatch ledger and approved baseline; recorded proposals for reconciliation in an appropriate session. No repair or acceptance claimed.",
+  "reproduction": "Read-only inspection of the existing compatibility state and package inventory confirms the pending local review items. No integration worker or jobs restarted.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
