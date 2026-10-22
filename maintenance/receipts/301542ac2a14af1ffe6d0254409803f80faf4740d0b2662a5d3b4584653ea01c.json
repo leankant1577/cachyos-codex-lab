@@ -1,0 +1,11 @@
+{
+  "summary": "ChatGPT desktop package updated with integration watcher preserved",
+  "changes": "Upgraded chatgpt-bin from 26.1016.51333-1 to 26.1016.61520-1 using the configured official repository and full pending system transaction. Refreshed package databases and downloaded the signed archive. Temporarily stopped and restored the file watcher to prevent a new integration executor; enablement unchanged. Package script repeated the same existing trusted signing-key setup; repository settings unchanged. Standard metadata caches updated. Private plan, evidence, review and proposals recorded. No other package changed; no reboot or existing job resumed.",
+  "tests": "ChatGPT OAuth status valid before and after. Package database consistency passed before and after. Signed old and new packages validated with full trust; installation scripts identical. Package integrity checks passed before and after for ChatGPT, LTS kernel, Mesa and Intel/AMD Vulkan. Fresh repository check after update returned exit 2 with empty output: no pending updates. Configuration fingerprints, repositories, timer, jobs and failed-unit list preserved. Watcher active and enabled again; integration execution timestamps unchanged. No graphical launch, performance benchmark or real downgrade test performed.",
+  "rollback": "Previous signed package retained in cache. If needed, pause the file watcher, reinstall the previous cached package with the package manager, restore watcher state and repeat integrity and database checks. No rollback needed during this run.",
+  "problem": "Preexisting custom integration acceptance remains incomplete. Observed desktop and administrative-directory permissions differ from the declared baseline; local review proposals retained. These findings do not establish a CachyOS-specific defect.",
+  "solution": "Applied the authorized desktop application update and preserved existing integration evidence, jobs and configuration. Deferred baseline reconciliation to an appropriate interactive session.",
+  "reproduction": "Current package versions, consistency checks, integrity checks and service timestamps were captured before and after the update.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
