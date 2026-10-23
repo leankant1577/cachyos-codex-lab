@@ -1,0 +1,11 @@
+{
+  "summary": "Routine librsvg repository update; integration verification remains unresolved",
+  "changes": "Full repository upgrade replaced only librsvg 2:2.63.3-1.1 with 2:2.63.4-1.1. No code or configuration edits, job restarts or reboot.",
+  "tests": "Package-manager transaction succeeded. Package integrity and database consistency passed. SVG-to-PNG smoke test produced a valid PNG. Shared-library resolution checked. Repository probe returned no pending updates. Compatibility service remains failed; prior validation reports incomplete integration evidence. Desktop and games were not tested interactively.",
+  "rollback": "Previous package was absent from cache before upgrade; immediate cached downgrade unavailable. Recovery requires a verified previous package and dependency assessment. No rollback executed.",
+  "problem": "Existing compatibility acceptance failures remain unresolved. Separate baseline drift observed in administrator directory permissions and expected display-manager unit availability.",
+  "solution": "Package update completed. Record separate local proposals to investigate integration acceptance and baseline drift without clearing failures or changing security and login configuration.",
+  "reproduction": "Read-only service status and existing validation conclusion; package integrity, database consistency and synthetic SVG conversion.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
