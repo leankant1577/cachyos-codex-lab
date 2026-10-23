@@ -1,0 +1,11 @@
+{
+  "summary": "Repository maintenance: Python parser updated and package database notice isolated",
+  "changes": "Completed full repository upgrade; python-pycparser changed from 3.11-1 to 3.12-1. Preserved and isolated a newly created regular CACHY_UPDATE_NOTICE marker that caused the package database checker to report an incomplete entry. No application source, service configuration, security permissions, desktop or GPU settings changed.",
+  "tests": "Before: package database check passed; parser package had 39 files with zero altered. Full upgrade exited successfully. After: parser package has 39 files with zero altered; pycparser 3.12 parsed a minimal C function. Initial database check failed on the notice marker; after preserving and moving only that marker, final database check passed. Synchronized repositories report no pending package upgrades. Two pre-existing integration units remain failed; a read-only identity probe reproduced unsupported Node entry point resolution. Maintenance timer remains active at 30-minute intervals with infinite service timeout.",
+  "rollback": "Previous parser package remains in local package cache for a compatibility-checked downgrade if a regression appears. Notice marker preserved in private audit backup; restoring it with package manager idle would restore the previous layout and checker error. No rollback was necessary after successful package tests.",
+  "problem": "Integration monitor cannot resolve the current Codex Node entry point. Separate security-directory and desktop-package inventory discrepancies require target-context validation. The notice marker producer and recurrence are not yet confirmed.",
+  "solution": "Parser update verified. Database checker restored by isolating only the notice marker. Integration workers and concurrent jobs preserved; unresolved diagnostics recorded locally for follow-up.",
+  "reproduction": "Current read-only integration identity probe rejects the Node entry point. Database check reported missing description and file-list records for the regular notice marker, then passed after its isolation. No broader upstream reproduction established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
