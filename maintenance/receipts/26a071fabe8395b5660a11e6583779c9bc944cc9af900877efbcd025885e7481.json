@@ -1,0 +1,11 @@
+{
+  "summary": "Atualização rotineira do pacote cachyos-hooks com pendências de integração registradas",
+  "changes": "cachyos-hooks atualizado de 2026.02.05-1 para 2026.10.23-1 por atualização completa dos repositórios; hooks de branding executados. Sem alterações locais de código, segurança, sessão gráfica ou jobs.",
+  "tests": "Transação concluída com código zero e verificação de assinatura; 14 arquivos do pacote sem alterações; sintaxe Bash aprovada; consulta final sem atualizações. Checagem do banco continua acusando arquivo de aviso irregular; duas unidades de compatibilidade permanecem falhas.",
+  "rollback": "Arquivos anteriores e metadados do pacote preservados em arquivo privado; pacote anterior comparado com arquivos instalados. Assinatura destacada antiga indisponível; não reduzir exigência de assinaturas. Restauração manual não executada.",
+  "problem": "Monitor local não resolve launcher Node atual. Aviso regular interfere na checagem do banco de pacotes. Divergências do perfil gráfico e permissão de diretório administrativo registradas para avaliação.",
+  "solution": "Atualização rotineira aplicada e validada; reparos de integração e divergências permanecem em propostas locais.",
+  "reproduction": "Diagnóstico local de unidades falhas e checagem do banco; origem reproduzível específica da distribuição não estabelecida nesta execução.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
