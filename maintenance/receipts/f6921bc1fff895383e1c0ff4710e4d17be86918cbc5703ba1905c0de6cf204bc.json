@@ -1,0 +1,11 @@
+{
+  "summary": "ChatGPT desktop package maintenance completed",
+  "changes": "Updated chatgpt-bin from 26.1016.61520-1 to 26.1021.22027-1 through full repository upgrade. Only this package changed. Package script reported local signing of one key; no manual signature-policy changes.",
+  "tests": "Package database check passed; 4161 package files verified with zero alterations; no failed system units; no pending repository updates; package manager configuration unchanged. Graphical runtime not tested.",
+  "rollback": "Previous signed package retained in local cache for dependency-reviewed rollback; rollback not required or executed.",
+  "problem": "Pre-existing directory permission and graphical login manager differ from recorded baseline.",
+  "solution": "Recorded discrepancies for separate review; preserved active session and existing permissions.",
+  "reproduction": "Administrative metadata checks confirmed both discrepancies; no CachyOS-specific defect established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
