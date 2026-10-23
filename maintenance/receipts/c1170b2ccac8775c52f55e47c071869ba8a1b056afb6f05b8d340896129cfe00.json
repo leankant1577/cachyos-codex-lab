@@ -1,0 +1,11 @@
+{
+  "summary": "Routine package maintenance: perl-uri updated from 5.39-1 to 5.40-1",
+  "changes": "Completed full repository synchronization and system upgrade; only perl-uri changed. No service restart, reboot, desktop change, security change or job execution.",
+  "tests": "Package transaction succeeded including signature and integrity checks. Installed version 5.40-1; all 95 package files unaltered. URI scheme, host and path smoke test passed. No pending upgrades in synchronized databases. Maintenance timer active with 30-minute interval. Package database consistency check still fails on a pre-existing regular notice file. Two compatibility-monitor units remain failed.",
+  "rollback": "Previous perl-uri 5.39-1 package remains in local package cache for a targeted pacman downgrade if a regression is confirmed; no rollback required by current tests.",
+  "problem": "Compatibility monitor rejects the installed JavaScript CLI launcher. Additional observed deviations: root-directory mode differs from recorded baseline; expected desktop packages absent; package database checker interprets a regular notice file as an incomplete package entry.",
+  "solution": "Package update verified. Monitor adaptation, permission-drift review, desktop-state confirmation and notice-file investigation retained as local proposals; unresolved issues were not marked repaired.",
+  "reproduction": "Read-only monitor identity check returns Cannot safely resolve the current Codex wrapper; pacman database consistency check reports missing description and file list for CACHY_UPDATE_NOTICE.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
