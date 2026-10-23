@@ -1,0 +1,11 @@
+{
+  "summary": "Repository maintenance: two WebKit packages updated",
+  "changes": "webkit2gtk-4.1 and webkitgtk-6.0 updated from 2.54.1-1 to 2.54.2-1 using a full repository upgrade. No other package changes; package-manager configuration unchanged. No reboot or security configuration change.",
+  "tests": "Before and after: package database consistency and package file presence passed. After: both shared libraries resolved dependencies; no failed system units; repository update check found no pending updates. Package signatures and integrity verified by package manager. Graphical applications not tested. Final package inventory reviewed.",
+  "rollback": "Read-only root filesystem snapshot and previous inventory retained privately. Child subvolumes excluded. Selective package-file and metadata recovery requires review; rollback not executed or tested.",
+  "problem": "Permission drift detected on the administrative home directory relative to the required policy. No permission change performed.",
+  "solution": "Local proposal recorded for separately authorized restoration of the required directory mode.",
+  "reproduction": "Routine local permission comparison against the recorded configuration requirement.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
