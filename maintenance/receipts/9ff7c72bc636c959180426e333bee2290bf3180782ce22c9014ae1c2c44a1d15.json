@@ -1,0 +1,11 @@
+{
+  "summary": "Verificação administrativa sem atualizações disponíveis; divergências locais registradas",
+  "changes": "Somente registros privados e recibo técnico; nenhuma mudança de pacotes, serviços, desktop ou permissões. Consulta de atualizações em banco isolado.",
+  "tests": "OAuth local confirmado. checkupdates retornou 2, sem atualizações. pacman -Dk retornou 0. pacman -Qk de kernels, Mesa, systemd e ChatGPT retornou 0, sem arquivos ausentes. Configurações monitoradas mantiveram hashes. Timer ativo com prazo de serviço ilimitado.",
+  "rollback": "Nenhuma alteração operacional a reverter; cópia do contrato anterior preservada localmente. Parada manual do serviço e do timer permanece disponível.",
+  "problem": "Duas unidades do monitor de compatibilidade permanecem falhas; resolvedor incompatível com lançador Node. KDE e SDDM ausentes, LightDM ativo. Modo do diretório administrativo diverge do contrato.",
+  "solution": "Propostas locais para reparo do monitor, investigação da divergência de desktop e revisão autorizada das permissões. Não disparado executor, não trocado desktop e não alterada segurança.",
+  "reproduction": "Consulta das unidades systemd, inspeção estática do resolvedor e do lançador, consulta de pacotes e modo do diretório administrativo.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
