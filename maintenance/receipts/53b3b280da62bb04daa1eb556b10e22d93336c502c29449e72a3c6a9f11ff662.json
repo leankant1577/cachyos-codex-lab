@@ -1,0 +1,11 @@
+{
+  "summary": "Repository package maintenance: glycin pair updated with database notice recovery",
+  "changes": "Full repository upgrade updated glycin and glycin-gtk4 from 2.2.3-1.1 to 2.2.4-1.1. Created private read-only pre-upgrade filesystem snapshot. Preserved and removed an unowned notice file from the package database after synchronization. No desktop, security policy, driver, repository or job changes.",
+  "tests": "Package signatures accepted. Final package database check passed. Integrity checks found zero modified files among 56 files. Shared-library resolution and dynamic loading passed. No pending repository upgrades. No graphical image-decoding tests performed.",
+  "rollback": "Old archives unavailable from mirrors. Private read-only pre-upgrade snapshot retained for selective package and database recovery after dependency review. Notice backup retained; restoring it reproduces the database validation error. No rollback executed.",
+  "problem": "Two pre-existing integration units remain failed: isolated identity discovery rejects current Node entry point although CLI version works. Recurrent unowned package database notice breaks database validation. Observed desktop and directory-mode discrepancies require context validation.",
+  "solution": "Recovered package database validation by preserving and relocating only the unowned notice. Integration repair deferred to responsible project; no dispatcher launched and failed states retained.",
+  "reproduction": "After full repository synchronization, an unowned regular notice appeared inside the local package database and its consistency check failed. Moving only that notice out restored consistency. Producer and permanent prevention not yet verified.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
