@@ -1,0 +1,11 @@
+{
+  "summary": "Routine 32-bit LDAP library package update completed",
+  "changes": "Full repository upgrade transaction updated only lib32-libldap from 2.7.1-1 to 2.7.2-1. No desktop, security, GPU, job, or service configuration changes. Private maintenance evidence and contract refreshed.",
+  "tests": "Package transaction exited successfully. Package database check passed. All 14 package files passed detailed metadata checks. Fresh update check found no pending repository updates. No failed system units. Maintenance timer active. Monitored configuration hashes unchanged. Final package inventory diff reviewed. Graphical application tests not performed.",
+  "rollback": "Previous signed package retained in local package cache. If regression is confirmed, review dependencies and restore previous package with pacman -U. Rollback not executed. Previous assurance contract preserved.",
+  "problem": "Observed desktop components differ from historical KDE and display-manager preference.",
+  "solution": "Recorded a local reconciliation proposal; left graphical session and desktop packages unchanged.",
+  "reproduction": "Package inventory and session entries show XFCE and LightDM; expected Plasma and SDDM packages were not found. No upstream-specific defect established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
