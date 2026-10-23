@@ -1,0 +1,11 @@
+{
+  "summary": "Routine maintenance verification; no pending repository updates.",
+  "changes": "No packages, configuration, services or jobs changed. Created private maintenance evidence and sanitized receipt.",
+  "tests": "ChatGPT OAuth active. Repository update check returned 2 with no output. Package database consistency passed. No failed systemd units. Maintenance timer active with existing 30-minute interval. Installed kernels 7.3.0-5 and 6.18.55-2; Mesa 26.2.5-1; systemd 262.1-1; ChatGPT 26.1016.61520-1. No desktop or gaming runtime tests performed.",
+  "rollback": "No system mutation; no rollback necessary.",
+  "problem": "Expected Plasma desktop package and display-manager unit were not found. Administrative home directory mode differs from recorded baseline.",
+  "solution": "Retained both deviations as local review proposals; no desktop reinstallation or security-permission change performed.",
+  "reproduction": "Read-only installed-package lookup and display-manager unit lookup report absence; directory mode inspection reports 0755 rather than recorded 0750.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
