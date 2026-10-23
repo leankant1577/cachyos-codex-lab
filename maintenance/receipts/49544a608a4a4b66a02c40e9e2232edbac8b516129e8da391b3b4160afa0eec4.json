@@ -1,0 +1,11 @@
+{
+  "summary": "Maintenance diagnosis: packages current; compatibility monitor and directory baseline need attention",
+  "changes": "No package, service, configuration or permission changes. Created private diagnostic evidence and a sanitized receipt.",
+  "tests": "OAuth status valid. Repository update check exited 2 with no pending updates. Package database consistency check passed. Compatibility identity probe failed because the installed Node entry point is unsupported by the existing resolver. Two compatibility units remain failed. Directory permission check found mode 0755 instead of expected 0750.",
+  "rollback": "No system changes to reverse. Existing configuration and jobs preserved.",
+  "problem": "Compatibility resolver supports ELF and literal shell wrappers but rejects the current Node entry point. A protected directory permission baseline also differs.",
+  "solution": "Pending: repair the identity resolver in its owning tracked project with regression tests and review. Permission correction requires specific security authorization; no change applied.",
+  "reproduction": "Run the existing identity-only monitor probe against the installed CLI; it rejects the wrapper. Inspect directory metadata against the documented baseline.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
