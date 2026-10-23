@@ -1,0 +1,11 @@
+{
+  "summary": "Maintenance diagnosis: local compatibility checker remains failed",
+  "changes": "Created private diagnosis and local proposals. No package, service configuration or code changes. The existing identity diagnostic refreshed its failure receipt.",
+  "tests": "OAuth status passed. Package database consistency passed. Repository update query returned no updates. CLI identity diagnostic reproduced unsupported JavaScript launcher failure. Desktop package and directory permission checks found configuration drift.",
+  "rollback": "No system configuration changes to revert. Preserve diagnostic failure evidence.",
+  "problem": "Local compatibility checker does not recognize the current CLI launcher. Desktop and directory permissions differ from the previously confirmed state.",
+  "solution": "Pending reviewed integration repair and reconciliation of desktop and directory permissions; no repair claimed.",
+  "reproduction": "Run the prepared compatibility identity diagnostic with the service search path: it rejects the JavaScript launcher.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
