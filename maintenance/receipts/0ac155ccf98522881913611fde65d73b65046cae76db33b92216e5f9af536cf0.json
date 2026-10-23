@@ -1,0 +1,11 @@
+{
+  "summary": "Routine Chromium update and package database notice recovery",
+  "changes": "Full repository upgrade updated only Chromium from 155.0.8059.84-1 to 156.0.8078.47-1. Preserved previous package and signature. Moved a regenerated unowned notice out of the local package database into a private backup. No service configuration or source code changed.",
+  "tests": "OAuth login confirmed before maintenance. Upgrade exit zero. Chromium integrity: 276 files and zero altered files; library resolution found no missing dependency. No pending repository updates. Database check passed before upgrade, failed on regenerated notice and passed after notice removal. Two preexisting compatibility units remain failed. Maintenance timer remains active at thirty-minute intervals. No graphical or performance test performed.",
+  "rollback": "Previous Chromium package and signature retained for conditional package rollback. Exact notice backup retained for restoration, which reproduces database checker failure. No rollback was needed.",
+  "problem": "Compatibility identity verification rejects the currently installed JavaScript CLI launcher; historical missing CLI failure is no longer the current symptom. Repository synchronization also regenerates a non-package notice that confuses database checking.",
+  "solution": "Recovered package database check by preserving and removing only the non-package notice. Generator remains unchanged. Recorded separate local integration repair proposal; did not run project jobs or change their configuration.",
+  "reproduction": "Local identity-only probe rejects the installed launcher. Database checker rejected the notice immediately after full repository synchronization and passed after the notice was moved.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
