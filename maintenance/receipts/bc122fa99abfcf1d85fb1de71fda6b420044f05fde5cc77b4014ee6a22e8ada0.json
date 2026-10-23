@@ -1,0 +1,11 @@
+{
+  "summary": "Repair local compatibility monitor npm launcher discovery and package database marker",
+  "changes": "Added static Linux npm native executable discovery and four regression tests. Refreshed executable watcher, reset two failed unit states and reactivated event monitoring without launching compatibility workers. Preserved validation baseline and dispatch ledger. Moved a non-package marker out of the local package database into private recovery storage. Added scoped SDD evidence and private audit records.",
+  "tests": "19 existing tests passed before changes; new positive regression failed before repair; all 23 tests passed afterward. Installed CLI identity probe and watcher unit verification passed. No failed systemd units remain. Package database integrity check initially failed on a stray regular file, then passed after its preservation and relocation. Repository update check returned no pending updates. Final manual diff review performed; no Git repository for native review and no independent review claimed. Full project compatibility was not run.",
+  "rollback": "Restore the backed-up runner, tests and watcher configuration only if unchanged since repair, reload systemd and restore prior watcher state. Preserved marker can be restored if destination is absent, reintroducing the database warning. Existing validation baseline and dispatch ledger were not modified.",
+  "problem": "Local monitor rejected a Node npm launcher because discovery supported only ELF and shell wrappers. A separate non-package marker caused a package database integrity warning. Observed desktop packages and display manager differ from the declared KDE profile.",
+  "solution": "Recognize the installed npm package layout, reject escaped or missing native targets and hash native executable bytes without evaluating JavaScript. Preserve and relocate the database marker. Graphical environment reconciliation remains a local proposal; no desktop changes performed.",
+  "reproduction": "Previously the read-only identity probe rejected the installed npm launcher. Isolated regression reproduced that failure and now passes. Package integrity checking reported a stray regular file as an invalid package entry.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
