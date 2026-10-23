@@ -1,0 +1,11 @@
+{
+  "summary": "Routine repository maintenance: libldap updated successfully",
+  "changes": "Full repository synchronization and system upgrade completed. Only libldap changed from 2.7.1-1.1 to 2.7.2-2.1. No reboot, driver tuning, job changes or desktop configuration changes. Existing root directory mode and display manager differ from recorded expectations; local follow-up proposal retained without modifying them.",
+  "tests": "Upgrade exit 0. Package database check passed before and after. Package integrity check: 216 files, zero altered before and after. No pending repository upgrades after synchronization. No failed system units before or after. Trusted package signatures remain required. Maintenance timer active. Application-level LDAP behavior was not tested.",
+  "rollback": "Previous package archive was not cached; immediate downgrade is not guaranteed and was not tested. A targeted downgrade would require a trusted previous package archive and dependency review. No rollback executed.",
+  "problem": "Routine package update available; configuration discrepancies recorded separately for review.",
+  "solution": "Applied authorized full repository upgrade and verified package/database consistency.",
+  "reproduction": "Repository update check identified libldap as the sole available upgrade.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
