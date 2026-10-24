@@ -1,0 +1,11 @@
+{
+  "summary": "Routine gamescope package update with compatibility attention retained",
+  "changes": "Full pacman -Syu completed successfully; gamescope 3.16.31-1 to 3.17.0-1 only.",
+  "tests": "pacman -Dk passed; pacman -Qkk gamescope passed; no pending repository upgrades; protected configuration hashes unchanged. No graphical or performance test.",
+  "rollback": "Previous signed gamescope package retained in cache; dependency-reviewed package downgrade available if regression is confirmed. No rollback needed.",
+  "problem": "Existing integration verification remains incomplete because prior behavioral proofs did not pass. No new distribution-specific regression established.",
+  "solution": "Updated package normally; preserved failed integration state and recorded separate investigation proposal.",
+  "reproduction": "Read-only inspection of previous integration conclusion; no agent jobs started.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
