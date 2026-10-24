@@ -1,0 +1,11 @@
+{
+  "summary": "Maintenance diagnostic checks; unresolved integration validation retained",
+  "changes": "No package, service or security changes. Private diagnostic evidence recorded.",
+  "tests": "Repository check exit 2 (2 means no updates); package database check exit 0; maintenance timer active. Existing compatibility unit remains failed.",
+  "rollback": "No system mutation to reverse. Existing configurations and jobs preserved.",
+  "problem": "Integration acceptance validation remains unsuccessful. Root directory mode and display manager differ from recorded desired configuration.",
+  "solution": "No unverified repair applied. Propose separate scoped integration investigation and configuration reconciliation.",
+  "reproduction": "Observed current service state and existing validation report; no new model sessions or integration reproduction executed.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
