@@ -1,0 +1,11 @@
+{
+  "summary": "Routine package diagnostics completed; configuration discrepancies require local review",
+  "changes": "No packages, desktop settings, services, jobs or security permissions changed. Private diagnostic report created.",
+  "tests": "Authenticated local session verified. Fresh repository check returned no updates. Package database consistency passed. Selected application, graphics and LTS kernel integrity checks found zero altered files. Integration service remains failed because compatibility evidence did not pass.",
+  "rollback": "No system changes to reverse. Existing configuration and integration baseline retained.",
+  "problem": "Observed desktop stack and directory permission differ from previously recorded expectations; integration validation remains incomplete.",
+  "solution": "No repair claimed. Local proposal recorded to reconcile desktop intent, review permission restoration and address integration proof failures separately.",
+  "reproduction": "Read-only service status, package inventory, integrity and permission checks.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
