@@ -1,0 +1,11 @@
+{
+  "summary": "Node.js repository update completed with existing configuration divergences retained for review",
+  "changes": "Full repository upgrade changed only nodejs from 26.11.1-2 to 26.12.1-2. No reboot or desktop, security, GPU or job changes.",
+  "tests": "Package transaction succeeded; all 127 package files unaltered; corrected Node JSON and crypto smoke passed; no pending package updates; repository configuration and maintenance service override unchanged. Initial smoke command had quoting error, so no valid pre-update functional baseline. Existing compatibility service failure persists.",
+  "rollback": "Previous Node.js package retained in cache. Restore with package manager only after dependency review if regression is confirmed; rollback not executed.",
+  "problem": "Existing compatibility integration failure remains. Root directory mode differs from recorded baseline. LightDM active while Plasma workspace and SDDM packages are absent.",
+  "solution": "Package update verified. Separate local proposals recorded for integration, security baseline and desktop discrepancies; no automatic changes to these areas.",
+  "reproduction": "Local package inventory and service status checks; no upstream distribution defect established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
