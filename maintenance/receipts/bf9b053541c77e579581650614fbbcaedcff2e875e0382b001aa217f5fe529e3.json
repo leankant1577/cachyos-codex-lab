@@ -1,0 +1,11 @@
+{
+  "summary": "Package maintenance completed; integration and configuration discrepancies recorded",
+  "changes": "Full repository synchronization and upgrade completed. lib32-brotli upgraded from 1.2.0-2 to 1.2.1-1. No source, security, desktop or service configuration changes applied.",
+  "tests": "Package database consistency passed before and after. All 18 installed package files present. Fresh update check found no pending updates. Protected configuration hashes unchanged. Maintenance timer active.",
+  "rollback": "Previous package retained in local cache for reviewed rollback if regression confirmed. No rollback performed.",
+  "problem": "Existing integration verification remains failed on workflow evidence gates. Observed root directory access mode and active login manager diverge from recorded baseline.",
+  "solution": "Preserved failed verification state and existing sessions; recorded local proposals for separate review. Package update succeeded.",
+  "reproduction": "Local package database and file checks; service state and protected configuration comparisons. No reproducible distribution defect established.",
+  "cachyos_specific": false,
+  "upstream_relevant": false
+}
